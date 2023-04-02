@@ -9,10 +9,9 @@ import os
 directory = "translation_dir"
 # Parent Directory path
 parent_dir = "/home/sanjana/Documents/Braille_Project/"
-  
 # Path
 path = os.path.join(parent_dir, directory)
-   
+
 tableList = ["unicode.dis","braille-patterns.cti","en-ueb-g1.ctb"]
 
 if os.path.isdir(path):
@@ -20,7 +19,7 @@ if os.path.isdir(path):
 else:
 	os.mkdir(path)
 
-#This below code opens a file and reads a file
+#This below code opens a file and reads a file and converts the text into braillie which is stored in a diffrent file in translation_dir directory
 with open("sample.pdf","rb") as f:
 	pdf = PdfReader(f)
 	no_of_pages = len(pdf.pages)
@@ -37,8 +36,5 @@ with open("sample.pdf","rb") as f:
 			
 
 
-#translate the data to braillie script
-#for i in lines:
-#	translation = louis.translateString(tableList,i)
-#	print(translation)
+
 	
