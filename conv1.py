@@ -30,7 +30,7 @@ with open("sample.pdf","rb") as f:
 			lines=page_obj.extract_text().splitlines()
 			#print("\n","THIS IS PAGE",page_id ,"\n")
 			#print(lines)
-			translated = open("/home/sanjana/Documents/Braille_Project/translation_dir"+"/"+"Page_"+str(page_id)+".BRL",'w')
+			translated = open("translation_dir"+"/"+"Page_"+str(page_id)+".BRL",'w')
 			for line in lines:
 				translated.write(louis.translateString(tableList,line)+ "\n")
 			translated.close()
